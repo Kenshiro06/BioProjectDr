@@ -573,85 +573,64 @@ p.description {
 /* Responsive */
 @media (max-width: 768px) {
     .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        transform: none;
-        background: var(--card-bg);
-        backdrop-filter: blur(10px);
-        box-shadow: var(--shadow);
+        top: auto;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 400px;
     }
 
     .nav-container {
-        padding: 1rem;
+        padding: 12px 16px;
         justify-content: space-between;
         width: 100%;
-        border-radius: 0;
-        border: none;
-        border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+        border-radius: 20px;
     }
     
     .mobile-menu-toggle {
-        display: block !important;
-        z-index: 1001;
+        display: none !important;
     }
 
     .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: var(--card-bg);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
         gap: 0;
+        justify-content: space-evenly;
+        width: 100%;
+        flex-direction: row;
+        position: static;
+        max-height: none;
+        overflow: visible;
         padding: 0;
-        box-shadow: var(--shadow);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        z-index: 998;
-    }
-    
-    .nav-menu.active {
-        max-height: 400px;
-        padding: 1rem 0;
+        box-shadow: none;
+        background: transparent;
+        backdrop-filter: none;
     }
     
     .nav-menu li {
-        width: 100%;
+        width: auto;
         text-align: center;
         padding: 0;
-        border-bottom: 1px solid rgba(102, 126, 234, 0.1);
-    }
-    
-    .nav-menu li:last-child {
         border-bottom: none;
     }
 
     .nav-link {
-        font-size: 1rem;
-        padding: 1rem;
-        border-radius: 0;
-        display: block;
-        width: 100%;
-    }
-    
-    .nav-link::after {
-        display: none;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+        border-radius: 12px;
     }
     
     /* Dark Mode Toggle */
     .dark-mode-toggle {
-        top: 10px;
-        right: 70px;
-        width: 45px;
-        height: 45px;
+        top: auto;
+        bottom: 90px;
+        right: 24px;
+        width: 50px;
+        height: 50px;
     }
 
     .hero-section {
         padding-top: 100px;
+        padding-bottom: 120px;
         min-height: 80vh;
     }
 
@@ -673,6 +652,11 @@ p.description {
     
     .contact-card {
         padding: 2rem 1.5rem;
+    }
+    
+    /* Add padding to sections to avoid bottom nav overlap */
+    section {
+        padding-bottom: 120px;
     }
 }
 
