@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Biodata - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="profile-card glass-effect">
+                    <div class="profile-image-wrapper">
+                        <img src="Gambar Dr.-Musab.jpg" alt="Dr. Musab Profile Photo" class="profile-image">
+                        <div class="profile-ring"></div>
+                    </div>
+                    <h1 class="profile-name">Dr. Musab</h1>
+                    <p class="profile-title">Medical Professional & AI Innovator</p>
+                    <div class="social-links">
+                        <a href="https://github.com/musabsahrim" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/musabsahrim" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title fade-in">About Us</h2>
+            <div class="about-content glass-effect fade-in">
+                <p class="about-text">
+                    We are a multidisciplinary team of medical professionals, researchers, and developers 
+                    from Universiti Sains Islam Malaysia (USIM) dedicated to revolutionizing healthcare 
+                    through artificial intelligence. Our team combines expertise in medicine, computer science, 
+                    and linguistics to create innovative solutions that address real-world challenges.
+                </p>
+                <p class="about-text">
+                    Our mission is to develop AI-powered tools that enhance medical diagnostics, improve 
+                    patient care, and break down language barriers in healthcare and cultural communication. 
+                    From disease detection systems to language translation tools, we leverage cutting-edge 
+                    technology to make healthcare and information more accessible to everyone.
+                </p>
+                <p class="about-text">
+                    Through collaboration and innovation, we strive to bridge the gap between traditional 
+                    medical practices and modern technology, creating intelligent solutions that serve 
+                    communities and advance the field of medical AI.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Our AI Projects</h2>
+            <div class="projects-content fade-in">
+                <p class="projects-description">
+                    Explore our innovative AI-powered healthcare and language solutions. 
+                    Each project combines medical expertise with cutting-edge artificial intelligence 
+                    to solve real-world challenges in healthcare and communication.
+                </p>
+                <a href="projects.html" class="view-projects-btn glow-button">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card glass-effect fade-in delay-100" data-tilt>
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>musab@usim.edu.my</p>
+                </div>
+                <div class="contact-card glass-effect fade-in delay-200" data-tilt>
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+60 19-632 1019</p>
+                </div>
+                <div class="contact-card glass-effect fade-in delay-300" data-tilt>
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Selangor, Malaysia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Dr. Musab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

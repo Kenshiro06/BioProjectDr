@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Hero Section -->
+    <section class="projects-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Our Amazing Projects</h1>
+            <p class="hero-subtitle fade-in">Showcasing innovation, creativity, and technical excellence</p>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-showcase">
+        <div class="container">
+            <div class="projects-grid-detailed">
+                <!-- Malaria & Lepto AI Project -->
+                <div class="project-card-detailed glass-effect fade-in">
+                    <div class="project-header">
+                        <div class="project-icon-large">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Malaria & Lepto AI</h3>
+                        <p class="project-desc">AI-powered diagnostic tool for malaria and leptospirosis detection using advanced machine learning algorithms</p>
+                        <a href="https://medai-usim.vercel.app/" target="_blank" class="visit-project-btn">
+                            <span>Visit Project</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="collaborators">
+                        <div class="collab-header">
+                            <i class="fas fa-users"></i>
+                            <span>Project Team</span>
+                        </div>
+                        <div class="collab-grid">
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <span class="collab-name">Prof. Dr. Nurul</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 12-964 6276</p>
+                                    <p><i class="fas fa-envelope"></i> drnurul@usim.edu.my</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <span class="collab-name">Dr. Musab</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 19-632 1019</p>
+                                    <p><i class="fas fa-envelope"></i> musab@usim.edu.my</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <span class="collab-name">Dr. Liyana</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 19-352 9289</p>
+                                    <p><i class="fas fa-envelope"></i> liyana.azmi@usim.edu.my</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <span class="collab-name">Dr. Abid</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 10-511 7381</p>
+                                    <p><i class="fas fa-envelope"></i> abid@usim.edu.my</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span class="collab-name">Puan Zayana</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 11-3939 0637</p>
+                                    <p><i class="fas fa-envelope"></i> zayana@usim.edu.my</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span class="collab-name">Muhamad Akmal Danish</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 10-310 3845</p>
+                                    <p><i class="fas fa-envelope"></i> akmaldnisy@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span class="collab-name">Ahmad Faris</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 17-211 6801</p>
+                                    <p><i class="fas fa-envelope"></i> ahmadfarisridhwan@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rumi Jawi Converter Project -->
+                <div class="project-card-detailed glass-effect fade-in">
+                    <div class="project-header">
+                        <div class="project-icon-large">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>Rumi Jawi Converter</h3>
+                        <p class="project-desc">Intelligent converter between Rumi and Jawi scripts using GPT technology for accurate transliteration</p>
+                        <a href="http://kodjawigpt.vercel.app/" target="_blank" class="visit-project-btn">
+                            <span>Visit Project</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="collaborators">
+                        <div class="collab-header">
+                            <i class="fas fa-users"></i>
+                            <span>Project Team</span>
+                        </div>
+                        <div class="collab-grid">
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <span class="collab-name">Dr. Musab</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 19-632 1019</p>
+                                    <p><i class="fas fa-envelope"></i> musab@usim.edu.my</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span class="collab-name">Muhamad Akmal Danish</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 10-310 3845</p>
+                                    <p><i class="fas fa-envelope"></i> akmaldnisy@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span class="collab-name">Ahmad Faris</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 17-211 6801</p>
+                                    <p><i class="fas fa-envelope"></i> ahmadfarisridhwan@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FoodLang Project -->
+                <div class="project-card-detailed glass-effect fade-in">
+                    <div class="project-header">
+                        <div class="project-icon-large">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>FoodLang</h3>
+                        <p class="project-desc">Arabic food translator for seamless culinary communication, bridging language barriers in food culture</p>
+                        <div class="project-links">
+                            <a href="https://foodlang.lovable.app" target="_blank" class="visit-project-btn">
+                                <span>Visit Website</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="telegram-buttons">
+                                <a href="https://t.me/FoodArabicbot" target="_blank" class="telegram-btn">
+                                    <i class="fab fa-telegram"></i>
+                                    <span>Food Bot</span>
+                                </a>
+                                <a href="https://t.me/HalalLogobot" target="_blank" class="telegram-btn">
+                                    <i class="fab fa-telegram"></i>
+                                    <span>Halal Bot</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collaborators">
+                        <div class="collab-header">
+                            <i class="fas fa-users"></i>
+                            <span>Project Team</span>
+                        </div>
+                        <div class="collab-grid">
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <span class="collab-name">Dr. Musab</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 19-632 1019</p>
+                                    <p><i class="fas fa-envelope"></i> musab@usim.edu.my</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span class="collab-name">Liyana</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 19-352 9289</p>
+                                    <p><i class="fas fa-envelope"></i> liyana.azmi@usim.edu.my</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span class="collab-name">Muhamad Akmal Danish</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 10-310 3845</p>
+                                    <p><i class="fas fa-envelope"></i> akmaldnisy@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="collab-card" onclick="toggleCollabInfo(this)">
+                                <div class="collab-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span class="collab-name">Siti Aisyah</span>
+                                <div class="collab-info">
+                                    <p><i class="fas fa-phone"></i> +60 19-703 9547</p>
+                                    <p><i class="fas fa-envelope"></i> aisyah@usim.edu.my</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home Button -->
+    <section class="back-section">
+        <div class="container">
+            <a href="index.html" class="back-button glow-button">
+                <i class="fas fa-arrow-left button-icon"></i>
+                <span class="button-text">Back to Home</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Dr. Musab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

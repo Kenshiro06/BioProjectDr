@@ -1,0 +1,272 @@
+/* Projects Page Specific Styles */
+
+.projects-hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 20px 80px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Projects Showcase */
+.projects-showcase {
+    padding: 50px 20px 100px;
+}
+
+.projects-grid-detailed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.project-card-detailed {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.project-card-detailed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.project-card-detailed:hover::before {
+    transform: scaleX(1);
+}
+
+.project-icon-large {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    transition: var(--transition);
+}
+
+.project-card-detailed:hover .project-icon-large {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.project-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.project-desc {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+/* Back Section */
+.back-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+.back-button .button-icon {
+    transition: var(--transition);
+}
+
+.back-button:hover .button-icon {
+    transform: translateX(-5px);
+}
+
+/* Responsive Design for Projects Page */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .projects-grid-detailed {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-icon-large {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .project-card-detailed {
+        padding: 2rem 1.5rem;
+    }
+    
+    .project-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .project-desc {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Project Links Container */
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    width: 100%;
+}
+
+.visit-project-btn {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Telegram Buttons Container */
+.telegram-buttons {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Telegram Button Styles */
+.telegram-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, #0088cc, #229ED9);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+    flex: 1;
+    min-width: 140px;
+    max-width: 180px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.telegram-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.telegram-btn:hover::before {
+    left: 100%;
+}
+
+.telegram-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 136, 204, 0.5);
+}
+
+.telegram-btn i {
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.telegram-btn:hover i {
+    transform: scale(1.15) rotate(-10deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .telegram-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .telegram-btn {
+        max-width: 250px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-links {
+        gap: 1rem;
+    }
+    
+    .telegram-btn {
+        padding: 0.75rem 1.2rem;
+        font-size: 0.85rem;
+        max-width: 100%;
+    }
+}
