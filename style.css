@@ -196,10 +196,12 @@ h6 {
     color: var(--text-color);
     cursor: pointer;
     transition: var(--transition);
+    padding: 0.5rem;
 }
 
 .mobile-menu-toggle:hover {
     color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 .nav-menu {
@@ -575,8 +577,10 @@ p.description {
         top: 0;
         left: 0;
         width: 100%;
-        bottom: auto;
         transform: none;
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
     }
 
     .nav-container {
@@ -584,14 +588,13 @@ p.description {
         justify-content: space-between;
         width: 100%;
         border-radius: 0;
-    }
-    
-    .logo {
-        font-size: 1.2rem;
+        border: none;
+        border-bottom: 1px solid rgba(102, 126, 234, 0.1);
     }
     
     .mobile-menu-toggle {
-        display: block;
+        display: block !important;
+        z-index: 1001;
     }
 
     .nav-menu {
@@ -603,7 +606,7 @@ p.description {
         backdrop-filter: blur(10px);
         flex-direction: column;
         gap: 0;
-        padding: 1rem 0;
+        padding: 0;
         box-shadow: var(--shadow);
         max-height: 0;
         overflow: hidden;
@@ -613,12 +616,13 @@ p.description {
     
     .nav-menu.active {
         max-height: 400px;
+        padding: 1rem 0;
     }
     
     .nav-menu li {
         width: 100%;
         text-align: center;
-        padding: 0.8rem 0;
+        padding: 0;
         border-bottom: 1px solid rgba(102, 126, 234, 0.1);
     }
     
@@ -628,8 +632,10 @@ p.description {
 
     .nav-link {
         font-size: 1rem;
-        padding: 0.5rem 1rem;
+        padding: 1rem;
         border-radius: 0;
+        display: block;
+        width: 100%;
     }
     
     .nav-link::after {
@@ -638,7 +644,7 @@ p.description {
     
     /* Dark Mode Toggle */
     .dark-mode-toggle {
-        top: 15px;
+        top: 10px;
         right: 70px;
         width: 45px;
         height: 45px;
