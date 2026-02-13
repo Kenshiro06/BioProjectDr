@@ -164,3 +164,17 @@ function toggleCollabInfo(card) {
     // Toggle current card
     card.classList.toggle('active');
 }
+
+
+// Toggle Team Section
+function toggleTeamSection(header) {
+    const collaborators = header.closest('.collaborators');
+    collaborators.classList.toggle('collapsed');
+}
+
+// Initialize all team sections as collapsed on page load
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.collaborators').forEach(section => {
+        section.classList.add('collapsed');
+    });
+});

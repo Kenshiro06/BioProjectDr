@@ -562,32 +562,77 @@ p.description {
 /* Responsive */
 @media (max-width: 768px) {
     .navbar {
-        top: auto;
-        bottom: 24px;
-        /* Floating bottom nav for mobile */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        max-width: 400px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: auto;
+        transform: none;
     }
 
     .nav-container {
-        padding: 12px 16px;
+        padding: 1rem;
         justify-content: space-between;
         width: 100%;
-        border-radius: 20px;
+        border-radius: 0;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
     }
 
     .nav-menu {
-        gap: 0;
-        justify-content: space-evenly;
+        position: fixed;
+        top: 70px;
+        left: 0;
         width: 100%;
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        box-shadow: var(--shadow);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 998;
+    }
+    
+    .nav-menu.active {
+        max-height: 400px;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
     }
 
     .nav-link {
-        font-size: 0.8rem;
-        padding: 8px 12px;
-        border-radius: 12px;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    /* Dark Mode Toggle */
+    .dark-mode-toggle {
+        top: 15px;
+        right: 70px;
+        width: 45px;
+        height: 45px;
     }
 
     .hero-section {
@@ -601,6 +646,18 @@ p.description {
 
     .profile-card {
         padding: 2.5rem 1.5rem;
+    }
+    
+    /* Contact Section - Single Column */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .contact-card {
+        padding: 2rem 1.5rem;
     }
 }
 
@@ -647,27 +704,7 @@ p.description {
     transform: translateX(3px);
 }
 
-.collaborators {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 2px solid rgba(102, 126, 234, 0.15);
-}
-
-.collab-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-.collab-header i {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-}
+/* Collaborators Section - removed old styles, now using collapsible version */
 
 .collab-grid {
     display: grid;
@@ -991,4 +1028,74 @@ p.description {
     50% {
         box-shadow: 0 10px 40px rgba(102, 126, 234, 0.6), 0 0 30px rgba(102, 126, 234, 0.4);
     }
+}
+
+
+/* Collapsible Team Section */
+.collaborators {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(102, 126, 234, 0.15);
+}
+
+/* Start collapsed by default */
+.collaborators.collapsed {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 1.5rem;
+}
+
+.collab-header {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: rgba(102, 126, 234, 0.08);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.collab-header:hover {
+    background: rgba(102, 126, 234, 0.15);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.collab-header i:first-child {
+    font-size: 1.1rem;
+}
+
+.collab-header span {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.toggle-icon {
+    margin-left: auto;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.collaborators.collapsed .toggle-icon {
+    transform: rotate(-180deg);
+}
+
+.collab-content {
+    max-height: 2000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    opacity: 1;
+    margin-top: 1.5rem;
+}
+
+.collaborators.collapsed .collab-content {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
 }
