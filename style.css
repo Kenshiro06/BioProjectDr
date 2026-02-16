@@ -722,11 +722,12 @@ p.description {
     border: 2px solid rgba(102, 126, 234, 0.2);
     border-radius: 20px;
     color: var(--text-color);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+    will-change: transform;
 }
 
 .collab-card::before {
@@ -851,17 +852,16 @@ p.description {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
     text-align: center;
     width: 100%;
-    transform: translateY(-10px);
+    will-change: max-height, opacity;
 }
 
 .collab-card.active .collab-info {
     max-height: 250px;
     opacity: 1;
     margin-top: 1rem;
-    transform: translateY(0);
 }
 
 .collab-info p {
@@ -962,6 +962,7 @@ p.description {
     .collab-header {
         padding: 0.9rem 1.2rem;
         font-size: 0.95rem;
+        -webkit-tap-highlight-color: transparent;
     }
     
     .collab-header span {
@@ -973,6 +974,16 @@ p.description {
         padding: 0.6rem 0.7rem;
         gap: 0.5rem;
     }
+    
+    /* Disable hover effects on mobile */
+    .collab-header:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .collab-card:hover {
+        transform: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -983,6 +994,7 @@ p.description {
     
     .collab-card {
         padding: 1rem;
+        -webkit-tap-highlight-color: transparent;
     }
     
     .collab-avatar {
@@ -1003,6 +1015,7 @@ p.description {
     .collab-header {
         font-size: 0.9rem;
         padding: 0.8rem 1rem;
+        -webkit-tap-highlight-color: transparent;
     }
     
     .collab-header span {
@@ -1089,20 +1102,19 @@ p.description {
     position: relative;
     padding: 1rem 1.5rem;
     border-radius: 15px;
-    transition: all 0.3s ease;
+    transition: background 0.2s ease, border-color 0.2s ease;
     background: rgba(102, 126, 234, 0.08);
     border: 1px solid rgba(102, 126, 234, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
+    will-change: background, border-color;
 }
 
 .collab-header:hover {
     background: rgba(102, 126, 234, 0.15);
     border-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
 }
 
 .collab-header i:first-child {
@@ -1117,7 +1129,8 @@ p.description {
 .toggle-icon {
     margin-left: auto;
     font-size: 0.9rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
+    will-change: transform;
 }
 
 .collaborators.collapsed .toggle-icon {
@@ -1127,13 +1140,15 @@ p.description {
 .collab-content {
     max-height: 2000px;
     overflow: hidden;
-    transition: max-height 0.5s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    transition: max-height 0.35s ease-out, opacity 0.25s ease-out;
     opacity: 1;
     margin-top: 1.5rem;
+    will-change: max-height, opacity;
 }
 
 .collaborators.collapsed .collab-content {
     max-height: 0;
     opacity: 0;
     margin-top: 0;
+    transition: max-height 0.3s ease-in, opacity 0.2s ease-in;
 }
