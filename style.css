@@ -949,6 +949,32 @@ p.description {
 
 
 /* Responsive styles for collaborators */
+@media (max-width: 768px) {
+    .collab-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .collab-card {
+        padding: 1.2rem;
+    }
+    
+    .collab-header {
+        padding: 0.9rem 1.2rem;
+        font-size: 0.95rem;
+    }
+    
+    .collab-header span {
+        font-size: 0.95rem;
+    }
+    
+    .collab-info p {
+        font-size: 0.75rem;
+        padding: 0.6rem 0.7rem;
+        gap: 0.5rem;
+    }
+}
+
 @media (max-width: 480px) {
     .collab-grid {
         grid-template-columns: 1fr;
@@ -975,7 +1001,17 @@ p.description {
     }
     
     .collab-header {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        padding: 0.8rem 1rem;
+    }
+    
+    .collab-header span {
+        font-size: 0.9rem;
+    }
+    
+    .collab-info p {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.6rem;
     }
 }
 
